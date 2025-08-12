@@ -1,4 +1,4 @@
-# Quantum Libraey
+# Quantum Library
 
 Loadstring
 ```lua
