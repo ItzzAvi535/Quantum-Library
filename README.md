@@ -14,10 +14,19 @@ local window = library:AddWindow("My Awesome Script", {
     Note = "Made by Itzzavi." -- your note here
 })
 ```
+AddParagraph:
+```lua
+local Paragraph = Tab:AddParagraph("Hello World")
+```
+
+UpdateParagraph:
+```lua
+local Paragraph = Tab:AddParagraph("Hello World")
+```
 
 AddLabel:
 ```lua
-Main:AddLabel("This is a test label")
+Paragraph:SetContent("Updated!")
 ```
 
 AddTab:
@@ -50,6 +59,10 @@ end)
 Dropdown:Add("Option1")
 Dropdown:Add("Option2")
 Dropdown:Add("Option3")
+```
+
+AddKeybind:
+```lua
 local Keybind = Main:AddKeybind("Test Keybind", function(key)
     print("Keybind set to:", key.Name)
 end)
