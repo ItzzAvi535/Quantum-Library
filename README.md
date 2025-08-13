@@ -21,12 +21,12 @@ local Paragraph = Tab:AddParagraph("Hello World")
 
 UpdateParagraph:
 ```lua
-local Paragraph = Tab:AddParagraph("Hello World")
+Paragraph:SetContent("Updated!")
 ```
 
 AddLabel:
 ```lua
-Paragraph:SetContent("Updated!")
+Main:AddLabel("This is a test label")
 ```
 
 AddTab:
