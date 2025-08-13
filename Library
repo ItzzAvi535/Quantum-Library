@@ -621,8 +621,8 @@ function library:AddWindow(windowTitle, options)
     ParagraphLabel.Parent = ParagraphFrame
     ParagraphLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     ParagraphLabel.BackgroundTransparency = 1.0
-    ParagraphLabel.Position = UDim2.new(0, 10, 0, 8)
-    ParagraphLabel.Size = UDim2.new(1, -20, 0, 0)
+    ParagraphFrame.Position = UDim2.new(0, 10, 0, 0)
+    ParagraphFrame.Size = UDim2.new(1, -30, 0, 0)
     ParagraphLabel.Font = Enum.Font.Gotham
     ParagraphLabel.Text = text
     ParagraphLabel.TextColor3 = Color3.fromRGB(220, 220, 220)
@@ -631,7 +631,6 @@ function library:AddWindow(windowTitle, options)
     ParagraphLabel.TextXAlignment = Enum.TextXAlignment.Left
     ParagraphLabel.AutomaticSize = Enum.AutomaticSize.Y
 
-    -- Calculate required height based on text
     local textSize = game:GetService("TextService"):GetTextSize(
         ParagraphLabel.Text,
         ParagraphLabel.TextSize,
@@ -643,7 +642,7 @@ function library:AddWindow(windowTitle, options)
     local paragraph = {}
     function paragraph:SetContent(newText)
         ParagraphLabel.Text = newText
-        -- Recalculate size when text changes
+        -- Mde by Avi btw
         local textSize = game:GetService("TextService"):GetTextSize(
             newText,
             ParagraphLabel.TextSize,
