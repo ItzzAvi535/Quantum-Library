@@ -602,38 +602,32 @@ function library:AddWindow(windowTitle, options)
         end
         
         function tab:AddParagraph(text)
-    local ParagraphFrame = Instance.new("Frame")
-    local ParagraphLabel = Instance.new("TextLabel")
-    local UICorner = Instance.new("UICorner")
-    local UIStroke = Instance.new("UIStroke")
-
     ParagraphFrame.Name = "ParagraphFrame"
     ParagraphFrame.Parent = TabContent
     ParagraphFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 40)
     ParagraphFrame.BorderSizePixel = 0
-    ParagraphFrame.Position = UDim2.new(0, 5, 0, 0)
-    ParagraphFrame.Size = UDim2.new(1, -25, 0, 0)
+    ParagraphFrame.Position = UDim2.new(0.02, 0, 0, 0) -- 2% right shift
+    ParagraphFrame.Size = UDim2.new(0.96, 0, 0, 0) -- 96% width (4% margin)
     ParagraphFrame.AutomaticSize = Enum.AutomaticSize.Y
 
-    UICorner.CornerRadius = UDim.new(0, 6)
+    UICorner2.CornerRadius = UDim.new(0, 6)
     UICorner.Parent = ParagraphFrame
 
     UIStroke.Color = colors.accent
     UIStroke.Thickness = 1
-    UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
     UIStroke.Parent = ParagraphFrame
 
     ParagraphLabel.Name = "ParagraphLabel"
     ParagraphLabel.Parent = ParagraphFrame
     ParagraphLabel.BackgroundTransparency = 1
-    ParagraphLabel.Position = UDim2.new(0, 8, 0, 8)
-    ParagraphLabel.Size = UDim2.new(1, -16, 0, 0)
-    ParagraphLabel.Font = Enum.Font.Gotham
+    ParagraphLabel.Size = UDim2.new(1, 0, 1, 0)
+    ParagraphLabel.Font = Enum.Font.GothamBold
     ParagraphLabel.Text = text
     ParagraphLabel.TextColor3 = Color3.fromRGB(220, 220, 220)
     ParagraphLabel.TextSize = 14
     ParagraphLabel.TextWrapped = true
-    ParagraphLabel.TextXAlignment = Enum.TextXAlignment.Left
+    ParagraphLabel.TextXAlignment = Enum.TextXAlignment.Center
+    ParagraphLabel.TextYAlignment = Enum.TextYAlignment.Center
     ParagraphLabel.AutomaticSize = Enum.AutomaticSize.Y
 
     local paragraph = {}
