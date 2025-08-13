@@ -1,9 +1,3 @@
-yo add a paragraph like this to my code please MAKE IT SUPPORT LIVE UPDATES AND MAKE IT GOOD LOOKING LIKE MAYBE A UI STROKE WHICH LOOKS LIKE A BOX AND INSIDE IS A TEXT
-
-Paragraphs, on the other hand, are designed to support live updates. They usually have a .SetContent() method that lets you change the text on the fly without breaking the layout. That’s why your previous paragraph-based setup worked perfectly.
-
-my code:
-
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
 local UserInputService = game:GetService("UserInputService")
