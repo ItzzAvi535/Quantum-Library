@@ -451,6 +451,7 @@ function library:AddWindow(windowTitle, options)
             DropdownList.Parent = DropdownFrame
             DropdownList.Active = true
             DropdownList.BackgroundColor3 = colors.dark_accent
+            Dropdown.List.ZIndex = 15
             DropdownList.BorderSizePixel = 0
             DropdownList.Position = UDim2.new(0, 0, 0, 55)
             DropdownList.Size = UDim2.new(1, 0, 0, 0)
